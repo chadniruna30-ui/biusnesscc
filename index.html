@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eshop - ম্যাংগো হাট</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Hind Siliguri', sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    .topbar{
+      background:#0c7a2d;
+      color:#fff;
+      padding:10px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:14px;
+    }
+
+    .navbar{
+      background:#fff;
+      padding:15px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .logo img{
+      width:70px;
+      height:70px;
+      border-radius:50%;
+    }
+
+    .logo h1{
+      color:#0c7a2d;
+      font-size:30px;
+      font-weight:700;
+    }
+
+    .search-box{
+      width:40%;
+      display:flex;
+    }
+
+    .search-box input{
+      width:100%;
+      padding:12px;
+      border:2px solid #0c7a2d;
+      border-right:none;
+      border-radius:6px 0 0 6px;
+      outline:none;
+    }
+
+    .search-box button{
+      background:#ff9800;
+      color:#fff;
+      border:none;
+      padding:12px 25px;
+      border-radius:0 6px 6px 0;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .hero{
+      background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1553279768-865429fa0078?q=80&w=1600');
+      background-size:cover;
+      background-position:center;
+      color:#fff;
+      text-align:center;
+      padding:120px 20px;
+    }
+
+    .hero h2{
+      font-size:55px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:30px;
+    }
+
+    .hero a{
+      background:#ff9800;
+      color:#fff;
+      text-decoration:none;
+      padding:15px 35px;
+      border-radius:8px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+    .section{
+      padding:60px 40px;
+    }
+
+    .section-title{
+      font-size:35px;
+      color:#0c7a2d;
+      margin-bottom:30px;
+      text-align:center;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:10px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+      color:#0c7a2d;
+    }
+
+    .price{
+      color:#ff9800;
+      font-size:24px;
+      font-weight:bold;
+      margin:10px 0;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#0c7a2d;
+      color:#fff;
+      padding:10px 20px;
+      border-radius:6px;
+      text-decoration:none;
+      margin-top:10px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .feature-box{
+      background:#fff;
+      padding:30px;
+      text-align:center;
+      border-radius:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .feature-box h3{
+      color:#0c7a2d;
+      margin:15px 0;
+    }
+
+    .footer{
+      background:#0c7a2d;
+      color:#fff;
+      text-align:center;
+      padding:30px 20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      .search-box{
+        width:100%;
+      }
+
+      .hero h2{
+        font-size:36px;
+      }
+
+      .hero p{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div>🚚 সারা বাংলাদেশে হোম ডেলিভারি</div>
+    <div>📞 Hotline: 017XXXXXXXX</div>
+  </div>
+
+  <div class="navbar">
+
+    <div class="logo">
+      <img src="1000004428.png" alt="">
+      <h1>Eshop - ম্যাংগো হাট</h1>
+    </div>
+
+    <div class="search-box">
+      <input type="text" placeholder="আম খুঁজুন...">
+      <button>Search</button>
+    </div>
+
+  </div>
+
+  <section class="hero">
+    <h2>তাজা ও কেমিক্যাল মুক্ত আম</h2>
+    <p>রাজশাহীর সেরা আম এখন অনলাইনে অর্ডার করুন</p>
+
+    <a href="#">এখনই অর্ডার করুন</a>
+  </section>
+
+  <section class="section">
+
+    <h2 class="section-title">জনপ্রিয় আম সমূহ</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?q=80&w=1200">
+        <div class="card-content">
+          <h3>হিমসাগর আম</h3>
+          <div class="price">৳ ১২০ / কেজি</div>
+          <p>মিষ্টি ও সুস্বাদু হিমসাগর আম</p>
+          <a href="#" class="btn">অর্ডার করুন</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?q=80&w=1200">
+        <div class="card-content">
+          <h3>ল্যাংড়া আম</h3>
+          <div class="price">৳ ১৩০ / কেজি</div>
+          <p>রাজশাহীর বিখ্যাত ল্যাংড়া আম</p>
+          <a href="#" class="btn">অর্ডার করুন</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1623934199716-dc28818a6ec7?q=80&w=1200">
+        <div class="card-content">
+          <h3>আম্রপালি আম</h3>
+          <div class="price">৳ ১৫০ / কেজি</div>
+          <p>রসালো ও মিষ্টি আম্রপালি আম</p>
+          <a href="#" class="btn">অর্ডার করুন</a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2 class="section-title">কেন আমাদের থেকে কিনবেন?</h2>
+
+    <div class="features">
+
+      <div class="feature-box">
+        <h3>🥭 ফ্রেশ আম</h3>
+        <p>বাগান থেকে সরাসরি সংগ্রহ করা হয়</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>🚚 দ্রুত ডেলিভারি</h3>
+        <p>সারা বাংলাদেশে দ্রুত হোম ডেলিভারি</p>
+      </div>
+
+      <div class="feature-box">
+        <h3>✅ ১০০% কোয়ালিটি</h3>
+        <p>কেমিক্যাল মুক্ত ও নিরাপদ আম</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="footer">
+    <h2>Eshop - ম্যাংগো হাট</h2>
+    <p>তাজা আম, খাঁটি স্বাদ</p>
+    <p>© 2025 All Rights Reserved</p>
+  </div>
+
+</body>
+</html>
